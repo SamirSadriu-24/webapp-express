@@ -1,0 +1,15 @@
+{
+  "name": "webapp-express",
+  "version": "1.0.0",
+  "description": "\"la mia prima web-App\"",
+  "main": "app.js",
+  "scripts": {
+    "watch": "node --watch app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "\"Samir-Sadriu\"",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
