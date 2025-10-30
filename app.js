@@ -2,6 +2,12 @@ const express = require('express')
 const app = express()
 const port = 3000
 
+
+require('dotenv').config();
+
+
+const connection = require('./data/db')
+
 app.get('/', (req, res) => {
     res.send("Web.app.Movies")
 });
