@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const port = 3000
+const cors = require('cors');
 
 //facciamo in modo che il file env possa funzionare
 require('dotenv').config();
@@ -19,7 +20,9 @@ app.get('/', (req, res) => {
 
 //faccio usare il router
 app.use ('/movies', moviesRouter);
-
+app.use(cors({
+    origin: 'https://localhost:5173',
+}));
 
 
 
