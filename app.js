@@ -9,6 +9,13 @@ require('dotenv').config();
 //connettiamo il database
 const connection = require('./data/db')
 
+app.use(cors({
+    origin: 'http://localhost:5173',
+}));
+
+//per leggere i file json
+app.use(express.json());
+
 //importiamo il router
 const moviesRouter = require('./routers/moviesRouter');
 
@@ -20,15 +27,6 @@ app.get('/', (req, res) => {
 
 //faccio usare il router
 app.use ('/movies', moviesRouter);
-app.use(cors({
-    origin: 'https://localhost:5173',
-}));
-
-
-
-
-
-
 
 
 
